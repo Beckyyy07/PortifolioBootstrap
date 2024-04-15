@@ -12,17 +12,17 @@ function initMap() {
     directionsRenderer = new google.maps.DirectionsRenderer();
     directionsRenderer.setMap(map);
 
-    // Obtenha a localização do usuário
+    // Obtendo a localização do usuário
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
             const userLocation = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
-            // Defina o ponto fixo (seu endereço, por exemplo)
+            // Definindo ponto fixo
             const destination =  {lat: -8.051970169330605, lng: -34.88530675670732};
 
-            // Calcule a rota se a permissão for concedida
+            // Calculando a rota se a permissão for concedida
             calculateAndDisplayRoute(userLocation, destination);
         }, function() {
             alert('Não foi possível obter a sua localização.');
