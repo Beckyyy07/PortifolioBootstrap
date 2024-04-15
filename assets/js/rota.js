@@ -46,7 +46,7 @@ function calculateAndDisplayRoute(userLocation, destination) {
             marker = new google.maps.Marker({
                 position: destination,
                 map: map,
-                title: 'Onde me encontrar'
+                title: 'Como me encontrar'
             });
         }
     });
